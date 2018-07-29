@@ -1,0 +1,41 @@
+---
+role:
+  # os: ["archlinux"]
+  pkg:
+    - base-devel
+    - ca-certificates
+    - cmake
+    # - firefox
+    # - git
+    - imagemagick
+    - mlocate # Run 'updatedb'
+    # - mpv # (vlc) Requires qt4
+    - the_silver_searcher
+    # - transmission-cli # remote/gtk/qt
+    - unzip
+    - youtubedl
+
+    # - php
+
+    # - nodejs
+    # - npm
+
+    # - python-pip
+
+    # - ruby
+    # - ruby-bundler
+  install:
+    - |
+      if !hash yaourt 2>/dev/null; then
+        TMPDIR=$(mktemp -d)
+        cd TMPDIR
+        git clone https://aur.archlinux.org/package-query.git
+        cd package-query
+        makepkg -si
+        cd ..
+        git clone https://aur.archlinux.org/yaourt.git
+        cd yaourt
+        makepkg -si
+        cd ..
+        echo rm $TMDIR
+      fi
