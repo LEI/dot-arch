@@ -36,6 +36,6 @@ role:
         git clone https://aur.archlinux.org/yaourt.git
         cd yaourt
         makepkg -si
-        cd ..
+        cd ..;
         echo rm $TMDIR
       fi
