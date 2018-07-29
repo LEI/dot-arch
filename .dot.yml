@@ -25,17 +25,5 @@ role:
     # - ruby
     # - ruby-bundler
   post_install:
-    - >
-      if !hash yaourt 2>/dev/null; then
-        TMPDIR=$(mktemp -d);
-        cd TMPDIR;
-        git clone https://aur.archlinux.org/package-query.git;
-        cd package-query;
-        makepkg -si;
-        cd ..;
-        git clone https://aur.archlinux.org/yaourt.git;
-        cd yaourt;
-        makepkg -si;
-        cd ..;
-        echo rm $TMDIR;
-      fi
+    # $(mktemp -d);
+    - "echo $DOT; ~/.dot/arch/install.sh"
