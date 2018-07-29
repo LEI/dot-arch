@@ -7,7 +7,7 @@ if hash yaourt 2>/dev/null; then
 fi
 
 TMPDIR=$(mktemp -d)
-cd TMPDIR
+cd "$TMPDIR"
 git clone https://aur.archlinux.org/package-query.git
 (cd package-query && makepkg -si)
 git clone https://aur.archlinux.org/yaourt.git
