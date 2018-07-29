@@ -13,7 +13,7 @@ role:
     - the_silver_searcher
     # - transmission-cli # remote/gtk/qt
     - unzip
-    - youtubedl
+    - youtube-dl
 
     # - php
 
