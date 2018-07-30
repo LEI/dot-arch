@@ -6,11 +6,15 @@ if hash yaourt 2>/dev/null; then
   return
 fi
 
+_makepkg() {
+  # --syncdeps
+  makepkg --install --noprogressbar
+}
+
 TMPDIR=$(mktemp -d)
 cd "$TMPDIR"
 git clone --quiet https://aur.archlinux.org/package-query.git
-makepkg --help
-(cd package-query && makepkg --syncdeps --install --noprogressbar)
+(cd package-query && _makepkg)
 git clone --quiet https://aur.archlinux.org/yaourt.git
-(cd yaourt && makepkg --syncdeps --install --noprogressbar)
+(cd yaourt && _makepkg)
 ls -la "$TMPDIR"
