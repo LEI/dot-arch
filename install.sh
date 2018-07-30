@@ -7,15 +7,13 @@ if hash yaourt 2>/dev/null; then
 fi
 
 _makepkg() {
-  makepkg --syncdeps --install --noprogressbar
+  makepkg --syncdeps --install \
+    --needed --noconfirm --noprogressbar
 }
 
 TMPDIR=$(mktemp -d)
 
 cd "$TMPDIR"
-
-makepkg --help
-exit 1
 
 sudo pacman -Syu --noconfirm yajl
 
