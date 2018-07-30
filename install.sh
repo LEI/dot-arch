@@ -14,6 +14,9 @@ TMPDIR=$(mktemp -d)
 
 cd "$TMPDIR"
 
+makepkg --help
+exit 1
+
 sudo pacman -Syu --noconfirm yajl
 
 git clone --quiet https://aur.archlinux.org/package-query.git
