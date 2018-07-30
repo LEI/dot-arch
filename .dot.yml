@@ -4,16 +4,16 @@ role:
   pkg:
     - base-devel
     - ca-certificates
-    # - cmake
-    # # - firefox
-    # # - git
-    # - imagemagick
-    # - mlocate # Run 'updatedb'
-    # # - mpv # (vlc) Requires qt4
-    # - the_silver_searcher
-    # # - transmission-cli # remote/gtk/qt
-    # - unzip
-    # - youtube-dl
+    - cmake
+    # - firefox
+    # - git
+    - imagemagick
+    - mlocate # Run 'updatedb'
+    # - mpv # (vlc) Requires qt4
+    - the_silver_searcher
+    # - transmission-cli # remote/gtk/qt
+    - unzip
+    - youtube-dl
 
     # - php
 

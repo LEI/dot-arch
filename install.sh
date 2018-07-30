@@ -10,7 +10,7 @@ TMPDIR=$(mktemp -d)
 cd "$TMPDIR"
 git clone --quiet https://aur.archlinux.org/package-query.git
 makepkg --help
-(cd package-query && makepkg -si)
+(cd package-query && makepkg --syncdeps --install --noprogressbar)
 git clone --quiet https://aur.archlinux.org/yaourt.git
-(cd yaourt && makepkg -si)
-echo "rm $TMPDIR"
+(cd yaourt && makepkg --syncdeps --install --noprogressbar)
+ls -la "$TMPDIR"
