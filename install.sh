@@ -8,8 +8,9 @@ fi
 
 TMPDIR=$(mktemp -d)
 cd "$TMPDIR"
-git clone https://aur.archlinux.org/package-query.git
+git clone --quiet https://aur.archlinux.org/package-query.git
+makepkg --help
 (cd package-query && makepkg -si)
-git clone https://aur.archlinux.org/yaourt.git
+git clone --quiet https://aur.archlinux.org/yaourt.git
 (cd yaourt && makepkg -si)
 echo "rm $TMPDIR"
