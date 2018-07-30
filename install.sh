@@ -14,8 +14,9 @@ TMPDIR=$(mktemp -d)
 
 cd "$TMPDIR"
 
+sudo pacman -Syu --noconfirm yajl
+
 git clone --quiet https://aur.archlinux.org/package-query.git
-pacman -Syu --noconfirm yajl
 (cd package-query && _makepkg)
 
 git clone --quiet https://aur.archlinux.org/yaourt.git
