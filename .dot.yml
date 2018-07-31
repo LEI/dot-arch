@@ -1,6 +1,6 @@
 ---
 role:
-  # os: ["archlinux"]
+  # os: ["arch"]
   pkg:
     - base-devel
     - ca-certificates
