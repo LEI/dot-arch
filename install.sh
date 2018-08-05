@@ -23,5 +23,4 @@ git clone --quiet https://aur.archlinux.org/package-query.git
 git clone --quiet https://aur.archlinux.org/yaourt.git
 (cd yaourt && _makepkg)
 
-echo "TMPDIR $TMPDIR"
-ls -la "$TMPDIR"
+# rm -r "$TMPDIR"
