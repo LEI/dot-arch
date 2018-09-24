@@ -25,5 +25,4 @@ role:
     # - ruby
     # - ruby-bundler
   post_install:
-    # $(mktemp -d);
-    - "echo $DOT; ~/.dot/arch/install.sh"
+    - ./install-yaourt.sh
